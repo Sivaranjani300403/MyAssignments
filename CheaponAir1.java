@@ -11,10 +11,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
+public class CheaponAir1 {
 
-
-public class Cheapoair {
-	
 	@Test
 
 	public void Flight() throws InterruptedException {
@@ -23,17 +21,6 @@ public class Cheapoair {
 		ChromeDriver driver = new ChromeDriver(options);
 		driver.get("https://www.cheapoair.com/");
 		driver.manage().window().maximize();
-		
-		
-		
-		//WebElement 
-		//driver.findElement(By.xpath("//div[@class='modal-close-icon']")).click();
-		
-		
-		
-		//driver.findElement(By.xpath("(//label[@class='custom-control-label'])[2]")).click();
-		//driver.findElement(By.xpath("//a[@class='suggestion-box__clear icon']")).click();
-		//driver.findElement(By.id("from0")).sendKeys("chennai");
 		
          driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
@@ -101,4 +88,6 @@ public class Cheapoair {
 		
 	}
 }
+
+
 
