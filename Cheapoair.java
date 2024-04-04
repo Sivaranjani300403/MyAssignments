@@ -9,11 +9,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
 
 
 public class Cheapoair {
-	public static void main(String[] args) throws InterruptedException {
+	
+	
+
+	public  static void main (String[] args) throws InterruptedException {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		ChromeDriver driver = new ChromeDriver(options);
@@ -79,10 +83,10 @@ public class Cheapoair {
 				
 				//9.Print the price from high to low
 				
-				List<WebElement> filght_charge = driver.findElements(By.xpath("//span[@class='currency text-nowrap']"));
+				List<WebElement> flight_charge = driver.findElements(By.xpath("//span[@class='currency text-nowrap']"));
 				Thread.sleep(3000);
-				for(int i=0;i<filght_charge.size();i++) {
-					String text = filght_charge.get(i).getText().replaceAll("USD", "");
+				for(int i=0;i<flight_charge.size();i++) {
+					String text = flight_charge.get(i).getText().replaceAll("USD", "");
 					System.out.println(text);
 				}
 					
